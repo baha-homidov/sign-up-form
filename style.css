@@ -117,11 +117,19 @@ input:focus {
     border: 1px solid #1C4ED8;
 }
 
-
-
-input:not(:placeholder-shown):invalid {
+input.mismatch {
     border: 1px solid red;
 }
+
+input:invalid.submitted {
+    border: 1px solid red;
+}
+
+
+
+
+
+
 
 
 

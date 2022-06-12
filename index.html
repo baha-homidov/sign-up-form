@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Doc</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
         <div class="input-container">
             <div class="slogan">Let's do this</div>
-                <form id="sign-up" class="input-form" action="post">
+                <form id="sign-up" onsubmit='return checkPassword()'>
 
                     <div class="input-element">
                         <label for="first-name">FIRST NAME</label>
@@ -40,7 +41,7 @@
 
                     <div class="input-element">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" placeholder=" ">
+                        <input type="email" id="email" name="email" placeholder="">
                     </div>
 
                     <div class="input-element">
@@ -50,18 +51,18 @@
 
                     <div class="input-element">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="pwd">
+                        <input type="password" id="password" name="pwd" required>
                     </div>
 
                     <div class="input-element">
                         <label for="password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirmPwd">
+                        <input type="password" id="confirm-password" name="confirmPwd" required>
                     </div>
                 </form>
         </div>
 
         <div class="content-bottom">
-            <button type="submit" form="sign-up" class="create-account">Create Account</button>
+            <button type="submit" form="sign-up" id="create-account">Create Account</button>
             <div class="login">Already have an account? <span><a href="">Log in</a></span></div>
 
         </div>
